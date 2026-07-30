@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogs – Bharat Medical Hall</title>
     <meta name="description" content="Read our latest health and medical blogs.">
-    <?php include 'header-links.php';?>
+    <?php include '../header-links.php';?>
     
     <style>
         .thm-breadcrumb li {
@@ -75,7 +75,7 @@
 
 <body>
 
-    <?php include 'header.php';?>
+    <?php include '../header.php';?>
     
     <!--Page Header Start-->
     <section class="page-header d-none d-md-block">
@@ -104,7 +104,7 @@
                 
                 <?php
                 // Read the blog data JSON file
-                $json_data = file_get_contents('blog_data.json');
+                $json_data = file_get_contents('../blog_data.json');
                 $blogs = json_decode($json_data, true);
 
                 if ($blogs && is_array($blogs)) {
@@ -141,7 +141,7 @@
         </div>
     </section>
     
-    <?php include 'footer.php';?>
+    <?php include '../footer.php';?>
 </body>
 
 </html>
