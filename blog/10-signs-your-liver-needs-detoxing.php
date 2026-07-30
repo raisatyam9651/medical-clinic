@@ -267,6 +267,10 @@
 <p><em>Disclaimer: The content provided in this article is for informational and educational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</em></p>
 
 </div>
+</div>
+</div>
+</div>
+</div>
 <!-- Sidebar -->
                 <div class="col-xl-4 col-lg-4">
                     <div class="sidebar" style="position: sticky; top: 120px;">
