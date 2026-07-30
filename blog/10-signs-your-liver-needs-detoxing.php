@@ -269,8 +269,6 @@
 </div>
 </div>
 </div>
-</div>
-</div>
 <!-- Sidebar -->
                 <div class="col-xl-4 col-lg-4">
                     <div class="sidebar" style="position: sticky; top: 120px;">
