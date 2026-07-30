@@ -278,7 +278,7 @@
                 
                 <!-- Sidebar -->
                 <div class="col-xl-4 col-lg-4">
-                    <div class="sidebar">
+                    <div class="sidebar" style="position: sticky; top: 120px;">
                         <div class="sidebar__single sidebar__post mb-5">
                             <h3 class="sidebar__title">Recent Posts</h3>
                             <ul class="sidebar__post-list list-unstyled">
@@ -313,7 +313,7 @@
                             </ul>
                         </div>
                         
-                        <div class="sidebar__single sidebar__cta" style="position: sticky; top: 120px; background-color: #468dcd; padding: 40px 30px; border-radius: 15px; text-align: center; color: #fff; box-shadow: 0 10px 30px rgba(70, 141, 205, 0.3);">
+                        <div class="sidebar__single sidebar__cta" style=" background-color: #468dcd; padding: 40px 30px; border-radius: 15px; text-align: center; color: #fff; box-shadow: 0 10px 30px rgba(70, 141, 205, 0.3);">
                             <i class="fas fa-user-md" style="font-size: 60px; margin-bottom: 20px;"></i>
                             <h3 style="color: #fff; margin-bottom: 15px; font-size: 28px; font-weight: 700;">Need Medical Advice?</h3>
                             <p style="color: rgba(255,255,255,0.9); margin-bottom: 25px; font-size: 16px;">Consult our experienced pharmacists and doctors today.</p>
