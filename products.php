@@ -7,7 +7,8 @@ $products = [
         'price' => '₹ 1400',
         'image' => './assets/images/products/Digital Blood Pressure Monitor.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => 'Brand - Dr Morepen'
+        'description' => 'Brand - Dr Morepen',
+        'slug' => 'digital-blood-pressure-monitor'
     ],
     [
         'id' => 2,
@@ -15,7 +16,8 @@ $products = [
         'price' => '₹ 1345',
         'image' => './assets/images/products/Premium Pulse Oximeter.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => '-'
+        'description' => '-',
+        'slug' => 'premium-pulse-oximeter'
     ],
     [
         'id' => 3,
@@ -23,7 +25,8 @@ $products = [
         'price' => '₹ 1995',
         'image' => './assets/images/products/Infrared Thermometer.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => 'Brand- AccuSure'
+        'description' => 'Brand- AccuSure',
+        'slug' => 'infrared-thermometer'
     ],
     [
         'id' => 4,
@@ -31,7 +34,8 @@ $products = [
         'price' => '₹ 1790',
         'image' => './assets/images/products/Nebulizer Machine.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => 'Brand- Samson'
+        'description' => 'Brand- Samson',
+        'slug' => 'nebulizer-machine'
     ],
     [
         'id' => 5,
@@ -39,7 +43,8 @@ $products = [
         'price' => '₹ 665',
         'image' => './assets/images/products/Glucose Monitoring System.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => 'Brand - Dr Morepen'
+        'description' => 'Brand - Dr Morepen',
+        'slug' => 'glucose-one-machine'
     ],
     [
         'id' => 6,
@@ -47,7 +52,8 @@ $products = [
         'price' => '₹ 10800',
         'image' => './assets/images/products/Wheelchair.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => 'Brand - Adini'
+        'description' => 'Brand - Adini',
+        'slug' => 'wheelchair'
     ],
     [
         'id' => 7,
@@ -55,7 +61,8 @@ $products = [
         'price' => '₹ 198',
         'image' => './assets/images/products/Digital Thermometer.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => '-'
+        'description' => '-',
+        'slug' => 'digital-thermometer'
     ],
     [
         'id' => 8,
@@ -63,7 +70,8 @@ $products = [
         'price' => '₹ 199',
         'image' => './assets/images/products/Oval Thermometer.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => '-'
+        'description' => '-',
+        'slug' => 'oval-thermometer'
     ],
     [
         'id' => 9,
@@ -71,7 +79,8 @@ $products = [
         'price' => '₹ 665',
         'image' => './assets/images/products/Professional Stethoscope.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => 'Brand - Dr Morepen'
+        'description' => 'Brand - Dr Morepen',
+        'slug' => 'professional-stethoscope'
     ],
     [
         'id' => 10,
@@ -79,7 +88,8 @@ $products = [
         'price' => '₹ 5990',
         'image' => './assets/images/products/Air Mattress.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => 'Brand- Samson'
+        'description' => 'Brand- Samson',
+        'slug' => 'air-mattress'
     ],
     [
         'id' => 11,
@@ -87,7 +97,8 @@ $products = [
         'price' => '₹ 1400',
         'image' => './assets/images/products/ECG Machine.webp',
         'whatsapp_number' => '+919776001963',
-        'description' => '-'
+        'description' => '-',
+        'slug' => 'bp-monitor'
     ]
 
 ];
@@ -154,6 +165,16 @@ $products = [
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
+    .product-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .product-link:hover .product-name {
+        color: #468dcd;
+    }
+
     .product-image {
         width: 100%;
         height: auto;
@@ -161,6 +182,7 @@ $products = [
         object-fit: cover;
         border-bottom: 1px solid #e9ecef;
         background-color: #f8f9fa;
+        display: block;
     }
 
     .product-info {
@@ -173,6 +195,7 @@ $products = [
         margin-bottom: 0.5rem;
         color: #2d3436;
         line-height: 1.3;
+        transition: color 0.2s;
     }
 
     .product-description {
@@ -213,6 +236,7 @@ $products = [
 
     .whatsapp-button:hover {
         background-color: #22c55e;
+        color: white;
     }
 
     .whatsapp-button i {
@@ -295,16 +319,20 @@ $products = [
         <div class="products-grid">
             <?php foreach ($products as $product): ?>
                 <div class="product-card">
-                    <img 
-                        src="<?php echo htmlspecialchars($product['image']); ?>" 
-                        alt="<?php echo htmlspecialchars($product['name']); ?>"
-                        class="product-image"
-                        onerror="this.src='https://via.placeholder.com/300x200?text=Product+Image'"
-                    >
-                    <div class="product-info">
-                        <h2 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h2>
-                        <p class="product-description"><?php echo htmlspecialchars($product['description']); ?></p>
-                        <div class="product-price"><?php echo htmlspecialchars($product['price']); ?></div>
+                    <a href="/products/<?php echo $product['slug']; ?>/" class="product-link">
+                        <img 
+                            src="<?php echo htmlspecialchars($product['image']); ?>" 
+                            alt="<?php echo htmlspecialchars($product['name']); ?>"
+                            class="product-image"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=Product+Image'"
+                        >
+                        <div class="product-info">
+                            <h2 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h2>
+                            <p class="product-description"><?php echo htmlspecialchars($product['description']); ?></p>
+                            <div class="product-price"><?php echo htmlspecialchars($product['price']); ?></div>
+                        </div>
+                    </a>
+                    <div class="product-info" style="padding-top: 0;">
                         <div class="actions">
                             <a 
                                 href="https://wa.me/<?php echo $product['whatsapp_number']; ?>?text=Hi, I'm interested in the <?php echo urlencode($product['name']); ?>. Is it available? Please provide more details about price and specifications." 
