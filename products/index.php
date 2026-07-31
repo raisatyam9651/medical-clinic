@@ -319,7 +319,7 @@ $products = [
         <div class="products-grid">
             <?php foreach ($products as $product): ?>
                 <div class="product-card">
-                    <a href="/products/<?php echo $product['slug']; ?>/" class="product-link">
+                    <a href="/products/<?php echo $product['slug']; ?>" class="product-link">
                         <img 
                             src="<?php echo htmlspecialchars($product['image']); ?>" 
                             alt="<?php echo htmlspecialchars($product['name']); ?>"
