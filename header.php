@@ -34,7 +34,7 @@
 
 
     <div class="page-wrapper">
-        <header class="main-header-two">
+        <header class="main-header-two" style="position: relative; z-index: 9999;">
             <div class="main-header-two__top">
                 <div class="main-header-two__top-wrapper">
                     <div class="main-header-two__top-inner">
@@ -109,7 +109,7 @@
                                     <i class="header-dropdown-icon d-none d-md-block fas fa-chevron-down"></i>
                                         <span class="main-menu-border"></span>
                                     </a>
-                                    <ul>
+                                    <ul style="z-index: 9999;">
                                         <li><a href="/pharmacy-sahitya">Pharmacy Sahitya</a></li>
                                         <li><a href="/chikitsa-paramarsa">Chikitsa Paramarsa</a></li>
                                         <li><a href="/pathology-and-diagnostics">Pathology & Diagnostics</a></li>
@@ -124,7 +124,7 @@
                                     <i class="header-dropdown-icon d-none d-md-block fas fa-chevron-down"></i>
                                         <span class="main-menu-border"></span>
                                     </a>
-                                    <ul>
+                                    <ul style="z-index: 9999;">
                                         <li><a href="/blog">Blogs</a></li>
                                          <li><a href="/products">Products</a></li>
                                         <li><a href="#">Stories</a></li>
@@ -161,7 +161,7 @@
             </nav>
         </header>
 
-        <div class="stricky-header stricked-menu main-menu main-menu-two">
+        <div class="stricky-header stricked-menu main-menu main-menu-two" style="z-index: 9999;">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
         
