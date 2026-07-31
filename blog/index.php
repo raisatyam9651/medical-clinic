@@ -108,6 +108,7 @@
                 $blogs = json_decode($json_data, true);
 
                 if ($blogs && is_array($blogs)) {
+                    $blogs = array_reverse($blogs); // Reverse so newest blogs (at the end of JSON) appear first
                     foreach ($blogs as $blog) {
                         $title = htmlspecialchars($blog['title']);
                         $url = htmlspecialchars($blog['url']);
